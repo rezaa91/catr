@@ -1,3 +1,7 @@
+use std::env;
+use catr;
+
 fn main() {
-    println!("Hello, world!");
+    let args: Vec<String> = env::args().skip(1).collect();
+    catr::execute(&args);
 }
